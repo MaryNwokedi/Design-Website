@@ -13,6 +13,7 @@
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 a,
@@ -86,7 +87,7 @@ h5 {
   font-weight: 400;
 }
 
-/*Desktop*/
+/*Header*/
 
 nav {
   height: 60px;
@@ -196,10 +197,9 @@ nav {
   margin-top: 10px;
 }
 
-/*header*/
 header {
   background-image: url("img/parallax.jpg");
-  height: 657px;
+  height: 100vh;
   background-position: 50% 0px;
   background-attachment: fixed;
   padding: 2rem 4rem;
@@ -210,8 +210,8 @@ header {
   color: #fff;
   font-size: 8rem;
   font-weight: 900;
-  margin-top: 10rem;
-  margin-bottom: 6rem;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
 }
 
 .title span {
@@ -221,32 +221,33 @@ header {
 
 header h4 {
   color: #fff;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 /*features*/
 #features {
   position: relative;
   background-color: #fff;
-  height: 110vh;
+  height: 120vh;
+  margin-bottom: 5rem;
 }
 
 #features:before {
   content: "";
   position: absolute;
   border-bottom: 100px solid #fff;
-  border-left: 100vw solid transparent;
+  border-left: 98.8vw solid transparent;
   top: -100px;
-  left: -17px;
+  left: 0;
 }
 
 #features:after {
   content: "";
   position: absolute;
   border-top: 100px solid #fff;
-  border-right: 100vw solid transparent;
+  border-right: 98.8vw solid transparent;
   bottom: -100px;
-  left: -17px;
+  left: 0;
 }
 
 .features-top {
@@ -255,6 +256,11 @@ header h4 {
 
 .features-top-content {
   grid-column: 1 / span 2;
+  padding: 2rem 0;
+}
+
+.features-top-content h4 {
+  margin-bottom: 2rem;
 }
 
 .features-top-icons {
@@ -291,7 +297,7 @@ header h4 {
 }
 
 .icon-content h5 {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .icon {
@@ -303,9 +309,7 @@ header h4 {
   text-align: center;
   padding: 0.5rem;
   margin-left: 0.8rem;
-}
-
-.icon i {
+  margin-bottom: 2rem;
   margin-top: 25px;
 }
 
@@ -345,77 +349,86 @@ header h4 {
 #design {
   background-color: var(--bg-light);
   position: relative;
-  height: 70vh;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
 }
 
 #design:before {
   content: "";
   position: absolute;
   border-bottom: 100px solid var(--bg-light);
-  border-left: 100vw solid transparent;
+  border-left: 98.8vw solid transparent;
   top: -100px;
-  left: -17px;
+  left: 0;
 }
 
 #design:after {
   content: "";
   position: absolute;
   border-top: 100px solid var(--bg-light);
-  border-right: 100vw solid transparent;
+  border-right: 98.8vw solid transparent;
   bottom: -100px;
-  left: -17px;
+  left: 0;
 }
 
 #design img {
-  grid-column: 1 / span 2;
   position: absolute;
   top: -60px;
   left: 30px;
+  padding-left: 5rem;
 }
 
 .design-content {
-  grid-column: 3 / span 2;
-  margin-top: 4rem;
+  grid-column: 2/3;
+  margin-top: 6rem;
 }
 
+.design-content h2 {
+  margin-bottom: 3rem;
+}
+
+.design-content h4 {
+  margin-bottom: 3rem;
+}
 /*Reviews*/
 #reviews {
   background-color: #31202f;
   position: relative;
-  height: 70vh;
+  height: 100vh;
+  text-align: center;
+  background: #31202f;
+  padding: 6rem 2rem;
 }
 
 #reviews:before {
   content: "";
   position: absolute;
   border-bottom: 100px solid #31202f;
-  border-left: 100vw solid transparent;
+  border-left: 98.8vw solid transparent;
   top: -100px;
-  left: -17px;
+  left: 0;
 }
 
 #reviews:after {
   content: "";
   position: absolute;
   border-top: 100px solid #31202f;
-  border-right: 100vw solid transparent;
+  border-right: 98.8vw solid transparent;
   bottom: -100px;
-  left: -17px;
-}
-
-#reviews {
-  text-align: center;
-  background: #31202f;
+  left: 0;
 }
 
 .reviews {
   width: 60%;
-  margin: 2rem auto;
+  margin: 0 auto;
 }
 
 .reviews h4,
 .reviews p {
   color: #fff;
+  padding: 2rem;
 }
 
 .reviews p {
@@ -423,47 +436,53 @@ header h4 {
 }
 
 .reviews i {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   border: 2px solid white;
-  font-size: 50px;
+  font-size: 20px;
   padding: 1.5rem;
+  text-align: center;
 }
 
 /*Why-US*/
 #why-us {
   background-color: #fff;
   position: relative;
-  height: 80vh;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
 }
 
 #why-us:before {
   content: "";
   position: absolute;
   border-bottom: 100px solid #fff;
-  border-left: 100vw solid transparent;
+  border-left: 98.8vw solid transparent;
   top: -100px;
-  left: -17px;
+  left: 0;
 }
 
 #why-us:after {
   content: "";
   position: absolute;
   border-top: 100px solid #fff;
-  border-right: 100vw solid transparent;
+  border-right: 98.8vw solid transparent;
   bottom: -100px;
-  left: -17px;
+  left: 0;
 }
 
 #why-us img {
-  grid-column: 3 / span 2;
-  width: 95%;
+  width: 100%;
 }
 .why-us-content {
-  grid-column: 1 / span 2;
-  margin-top: 4rem;
-  padding: 0 5rem 0 2rem;
+  margin-top: 6rem;
+}
+
+.why-us-content h2,
+.why-us-content p {
+  padding-top: 2rem;
 }
 
 /*Awards*/
@@ -477,18 +496,18 @@ header h4 {
   content: "";
   position: absolute;
   border-bottom: 100px solid var(--bg-light);
-  border-left: 100vw solid transparent;
+  border-left: 98.8vw solid transparent;
   top: -100px;
-  left: -17px;
+  left: 0;
 }
 
 #awards:after {
   content: "";
   position: absolute;
   background-color: #000;
-  height: 200px;
+  height: 150px;
   width: 100%;
-  top: 65%;
+  top: 70%;
   z-index: 10;
 }
 
@@ -536,7 +555,8 @@ header h4 {
 #contact h2 {
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   margin-left: 4rem;
   position: relative;
 }
@@ -607,11 +627,14 @@ header h4 {
 
 /* Mobile Phones */
 @media screen and (max-width: 540px) {
-  header {
-    height: 70vh;
-    padding: 2rem 2rem;
+  .nav {
+    display: none;
   }
 
+  header {
+    height: 100vh;
+    padding: 2rem 0;
+  }
   .title {
     font-size: 4rem;
     font-weight: 900;
