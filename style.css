@@ -50,7 +50,7 @@ footer {
 .grid {
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 3fr 1fr;
 }
 
 /* fonts */
@@ -101,27 +101,36 @@ nav {
 }
 
 .logo {
-  grid-column: 1 / span 2;
   font-size: 4rem;
   margin: 2rem 0 0 0;
   color: #fff;
   padding-left: 1.5rem;
+  justify-self: start;
+}
+
+.mobile-bar {
+  color: #fff;
+  font-size: 40px;
+  justify-self: end;
+  margin: 0 2rem 0 0;
+  display: none;
+}
+
+.exit {
+  display: none;
 }
 
 .nav-title {
-  grid-column: 3 / span 2;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-self: end;
+  margin-right: -15rem;
 }
 
 .nav-title ul {
   display: flex;
   padding: 0 2rem 0 0;
-  margin-left: -6rem;
-  align-items: flex-start;
-  justify-content: flex-start;
 }
 
 .nav-title li {
@@ -209,7 +218,6 @@ header {
 .banner-content {
   width: 60%;
   margin: 0;
-  border: 2px solid green;
 }
 
 .title {
@@ -376,10 +384,6 @@ header h4 {
 }
 
 .design-img img {
-  /* position: absolute;
-  top: -60px;
-  left: 0px;
-  padding-left: 3rem;*/
   vertical-align: top;
   max-height: auto;
   width: auto;
@@ -591,8 +595,52 @@ header h4 {
 }
 
 @media screen and (max-width: 999px) {
-  .nav {
+  .exit {
+    display: block;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: -3rem;
+  }
+
+  .nav-title {
+    position: fixed;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    justify-self: center;
+    margin-right: 0;
+    background-color: rgba(63, 58, 58, 0.548);
+    width: 60%;
+    height: 100%;
+    text-align: left;
+    padding-top: 2rem;
+  }
+
+  .nav-title ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .nav-title li {
+    padding: 1rem 2rem;
+    display: block;
+  }
+
+  .nav-title a {
+    font-size: 1.2rem;
+  }
+
+  .mobile-bar {
+    display: block;
+  }
+
+  .hide-mobile {
     display: none;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   section,
@@ -650,7 +698,6 @@ header h4 {
   }
 
   .design-img {
-    border: 2px solid blue;
     margin-bottom: 5rem;
     width: 100%;
   }
@@ -675,8 +722,6 @@ header h4 {
 
   #reviews {
     height: auto;
-    text-align: center;
-    background: #31202f;
     padding-top: 4rem;
   }
 
