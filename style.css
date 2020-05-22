@@ -3,13 +3,11 @@
   --primary: #ff2d50;
   --secondary: #0a0b5b;
   --bg-light: #f5f5f5;
-  --boxShadow: 0 15px 0 0;
-  --padding1: 1.5rem;
-  --padding2: 2rem;
-  --darkColor: #1e1e1e;
+  --darkColor: #424141;
 }
 
 /* reset */
+
 body {
   margin: 0;
   padding: 0;
@@ -26,7 +24,7 @@ ul {
 /* base styles */
 section,
 footer {
-  padding: 4rem 4rem;
+  padding: 4rem;
 }
 
 .button {
@@ -89,6 +87,16 @@ h5 {
 
 /*Header*/
 
+header {
+  background-image: url("img/parallax.jpg");
+  height: 100vh;
+  background-position: 50% 0px;
+  background-attachment: fixed;
+  padding: 2rem 4rem;
+  position: relative;
+  max-width: 100%;
+}
+
 nav {
   height: 60px;
   position: fixed;
@@ -96,7 +104,7 @@ nav {
   top: 0;
   right: 0;
   left: 0;
-  padding-top: 0.5rem;
+  padding: 1rem 1.5rem;
   transition: background-color 0.5s ease;
 }
 
@@ -104,7 +112,6 @@ nav {
   font-size: 4rem;
   margin: 2rem 0 0 0;
   color: #fff;
-  padding-left: 1.5rem;
   justify-self: start;
 }
 
@@ -112,7 +119,6 @@ nav {
   color: #fff;
   font-size: 40px;
   justify-self: end;
-  margin: 0 2rem 0 0;
   display: none;
 }
 
@@ -125,7 +131,8 @@ nav {
   flex-direction: row;
   align-items: center;
   justify-self: end;
-  margin-right: -15rem;
+  position: relative;
+  left: 170px
 }
 
 .nav-title ul {
@@ -206,14 +213,7 @@ nav {
   margin-top: 10px;
 }
 
-header {
-  background-image: url("img/parallax.jpg");
-  height: 100vh;
-  background-position: 50% 0px;
-  background-attachment: fixed;
-  padding: 2rem 4rem;
-  position: relative;
-}
+
 
 .banner-content {
   width: 60%;
@@ -222,10 +222,9 @@ header {
 
 .title {
   color: #fff;
-  font-size: 8rem;
+  font-size: 7rem;
   font-weight: 900;
-  margin-top: 6rem;
-  margin-bottom: 2rem;
+  padding-top: 6rem;
 }
 
 .title span {
@@ -283,6 +282,10 @@ header h4 {
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
+}
+
+.features-top-content p {
+  line-height: 1.5rem;
 }
 
 .features-top-icons .fas {
@@ -379,6 +382,7 @@ header h4 {
   justify-content: space-between;
   align-items: center;
 }
+
 .design-img {
   width: 49%;
 }
@@ -404,11 +408,12 @@ header h4 {
 .design-content h4 {
   margin-bottom: 3rem;
 }
+
 /*Reviews*/
 #reviews {
   background-color: #31202f;
   position: relative;
-  height: 90vh;
+  height: 80vh;
   text-align: center;
   background: #31202f;
   padding: 6rem 2rem 2rem;
@@ -417,7 +422,8 @@ header h4 {
 
 .reviews {
   width: 60%;
-  margin: 4rem auto 0;
+  margin: 0 auto;
+  padding-top: 5rem;
   transform: skew(0deg, 6deg);
 }
 
@@ -438,6 +444,7 @@ header h4 {
   font-size: 20px;
   padding: 1.5rem;
   text-align: center;
+  color: #fff;
 }
 
 /*Why-US*/
@@ -455,6 +462,7 @@ header h4 {
   width: 100%;
   transform: skew(0deg, 6deg);
 }
+
 .why-us-content {
   margin-top: 2rem;
   transform: skew(0deg, 6deg);
@@ -572,9 +580,8 @@ header h4 {
 
 #message {
   display: block;
-  width: 90%;
+  width: 70%;
   margin-bottom: 30px;
-  padding: 15px 15px 0 15px;
 }
 
 .submit {
@@ -594,7 +601,39 @@ header h4 {
   color: var(--primary);
 }
 
-@media screen and (max-width: 999px) {
+
+@media screen and (max-width:1024px) {
+
+  .features-top-content h4 {
+    font-size: 1.5rem;
+  }
+
+  .features-top-content p {
+    font-size: 16px
+  }
+
+  #design {
+    height: 50vh;
+  }
+
+  #reviews {
+    padding: 0;
+  }
+
+  #why-us {
+    height: 70vh;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .exit {
     display: block;
     color: #fff;
@@ -650,23 +689,20 @@ header h4 {
   }
 
   .title {
-    font-size: 6rem;
-    margin-bottom: 4rem;
+
+    font-size: 5rem;
+    margin-bottom: 1rem;
   }
 
   .title span {
-    margin-bottom: 4rem;
-  }
-
-  header h4 {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
 
   #features {
     padding: 2rem 0;
     height: auto;
   }
+
   .features-top {
     grid-template-columns: 1fr;
   }
@@ -701,6 +737,7 @@ header h4 {
     margin-bottom: 5rem;
     width: 100%;
   }
+
   .design-img img {
     width: 60%;
     margin: -3rem auto 0 auto;
@@ -710,19 +747,15 @@ header h4 {
   .design-content {
     width: 100%;
     margin: 0 0 10px 0;
-  }
-
-  .design-content h2 {
     text-align: center;
-  }
-
-  .design-content h4 {
-    font-size: 2rem;
   }
 
   #reviews {
     height: auto;
-    padding-top: 4rem;
+  }
+
+  .reviews {
+    padding: 4rem 0;
   }
 
   #why-us {
@@ -748,6 +781,7 @@ header h4 {
   #awards {
     height: auto;
   }
+
   .grid2 {
     grid-template-columns: 1fr;
   }
@@ -767,58 +801,59 @@ header h4 {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 560px) {
+
+  section,
+  footer,
+  header {
+    padding: 2rem 1rem;
+  }
+
+  .logo {
+    font-size: 5rem;
+  }
+
+  nav {
+    padding: 0.5rem 1rem;
+  }
+
   .title {
     font-size: 4rem;
-    margin-bottom: 2rem;
   }
 
-  .title span {
-    margin-bottom: 2rem;
-  }
-
-  .features-top-icons {
-    grid-gap: 20px;
-  }
-
-  .features-top-icons .fas {
-    font-size: 20rem;
-    margin: 0 auto;
-  }
-
-  .features-top-icons {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 667px) {
   header h4 {
-    padding-right: 7rem;
+    font-size: 1.5rem
   }
 
   .banner-content {
-    width: 100%;
+    width: 70%;
   }
 
   .button {
     font-size: 0.8rem;
-    padding: 25px 35px;
+    padding: 25px;
+  }
+
+  .features-top-content {
+    padding: 2rem 1rem;
+  }
+
+
+  .features-top-icons {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  .features-top-icons .fas {
+    font-size: 250px;
+    padding: 2rem;
+
   }
 
   .features-bottom {
     grid-template-columns: 1fr;
     margin-top: 4rem;
+    padding: 2rem 1rem;
   }
 
-  h2 {
-    font-size: 3rem;
-  }
-
-  .design-content h4 {
-    font-size: 1.5rem;
-  }
-
-  h4 {
-    font-size: 2rem;
-  }
 }
