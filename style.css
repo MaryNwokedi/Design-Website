@@ -216,7 +216,7 @@ nav {
 
 
 .banner-content {
-  width: 60%;
+  width: 70%;
   margin: 0;
 }
 
@@ -224,12 +224,12 @@ nav {
   color: #fff;
   font-size: 7rem;
   font-weight: 900;
-  padding-top: 6rem;
+  padding-top: 3rem;
 }
 
 .title span {
   display: block;
-  margin-bottom: 6rem;
+  margin-bottom: 5rem;
 }
 
 header h4 {
@@ -721,7 +721,7 @@ header h4 {
   }
 
   .features-top-icons .fas {
-    font-size: 10rem;
+    font-size: 6rem;
   }
 
   #design {
