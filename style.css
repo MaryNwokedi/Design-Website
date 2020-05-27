@@ -45,12 +45,6 @@ footer {
   color: white;
 }
 
-.grid {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: 1fr 3fr 1fr;
-}
-
 /* fonts */
 body {
   font-family: "Catamaran", sans-serif;
@@ -85,6 +79,8 @@ h5 {
   font-weight: 400;
 }
 
+/*...........................      Main Styling..........................................................*/
+
 /*Header*/
 
 header {
@@ -104,8 +100,14 @@ nav {
   top: 0;
   right: 0;
   left: 0;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   transition: background-color 0.5s ease;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 3fr 1fr;
 }
 
 .logo {
@@ -132,7 +134,7 @@ nav {
   align-items: center;
   justify-self: end;
   position: relative;
-  left: 170px
+  left: 170px;
 }
 
 .nav-title ul {
@@ -156,7 +158,7 @@ nav {
 
 .nav-link::after {
   content: "";
-  width: 90%;
+  width: 100%;
   height: 2px;
   background-color: #fff;
   position: absolute;
@@ -186,20 +188,32 @@ nav {
   padding: 0.2rem;
   margin: 0 0.2rem;
   text-align: center;
+  transition: 0.5s ease;
 }
 
 .fa-facebook-f {
   color: darkblue;
 }
 
+.fa-facebook-f:hover {
+  color: var(--darkColor);
+}
+
 .fa-twitter {
   color: deepskyblue;
+}
+
+.fa-twitter:hover {
+  color: var(--darkColor);
 }
 
 .fa-instagram-square {
   color: deeppink;
 }
 
+.fa-instagram-square:hover {
+  color: var(--darkColor);
+}
 .scrolling-active {
   background-color: #000;
 }
@@ -212,8 +226,6 @@ nav {
   font-size: 3rem;
   margin-top: 10px;
 }
-
-
 
 .banner-content {
   width: 70%;
@@ -236,6 +248,7 @@ header h4 {
   color: #fff;
   margin-bottom: 2rem;
 }
+/* Header-End*/
 
 /*features*/
 #features {
@@ -366,6 +379,7 @@ header h4 {
 .bluetooth:hover {
   background: #4d6468;
 }
+/*Features-End*/
 
 /*Design*/
 #design {
@@ -408,6 +422,7 @@ header h4 {
 .design-content h4 {
   margin-bottom: 3rem;
 }
+/*Design-End*/
 
 /*Reviews*/
 #reviews {
@@ -446,6 +461,7 @@ header h4 {
   text-align: center;
   color: #fff;
 }
+/*Reviews-End*/
 
 /*Why-US*/
 #why-us {
@@ -467,6 +483,7 @@ header h4 {
   margin-top: 2rem;
   transform: skew(0deg, 6deg);
 }
+/*Why US End*/
 
 /*Awards*/
 #awards {
@@ -530,6 +547,7 @@ header h4 {
 .awards-block3 {
   box-shadow: 0 10px 60px 0px #dd2476;
 }
+/*Awards-End*/
 
 /*Footer*/
 #contact {
@@ -580,8 +598,8 @@ header h4 {
 
 #message {
   display: block;
-  width: 70%;
-  margin-bottom: 30px;
+  width: 60%;
+  margin: 5px 0 25px 30px;
 }
 
 .submit {
@@ -601,15 +619,18 @@ header h4 {
   color: var(--primary);
 }
 
+/*Footer-End*/
 
-@media screen and (max-width:1024px) {
+/*...................................Media Queries...................................................*/
 
+/* Large Laptops to Small Laptops*/
+@media screen and (max-width: 1024px) {
   .features-top-content h4 {
     font-size: 1.5rem;
   }
 
   .features-top-content p {
-    font-size: 16px
+    font-size: 16px;
   }
 
   #design {
@@ -632,7 +653,7 @@ header h4 {
     font-size: 1.5rem;
   }
 }
-
+/*Small Laptops to Large Mobile Phones*/
 @media screen and (max-width: 768px) {
   .exit {
     display: block;
@@ -689,7 +710,6 @@ header h4 {
   }
 
   .title {
-
     font-size: 5rem;
     margin-bottom: 1rem;
   }
@@ -800,8 +820,11 @@ header h4 {
     margin: 0 auto;
   }
 }
-
+/* Large Mobile Phones to Small Mobile Phones*/
 @media screen and (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 
   section,
   footer,
@@ -810,7 +833,7 @@ header h4 {
   }
 
   .logo {
-    font-size: 5rem;
+    display: none;
   }
 
   nav {
@@ -822,11 +845,11 @@ header h4 {
   }
 
   header h4 {
-    font-size: 1.5rem
+    font-size: 1.5rem;
   }
 
   .banner-content {
-    width: 70%;
+    width: 90%;
   }
 
   .button {
@@ -838,7 +861,6 @@ header h4 {
     padding: 2rem 1rem;
   }
 
-
   .features-top-icons {
     grid-template-columns: 1fr;
     grid-gap: 20px;
@@ -847,7 +869,6 @@ header h4 {
   .features-top-icons .fas {
     font-size: 250px;
     padding: 2rem;
-
   }
 
   .features-bottom {
@@ -856,4 +877,14 @@ header h4 {
     padding: 2rem 1rem;
   }
 
+  #name,
+  #email,
+  #phone,
+  #message {
+    margin: 5px 0px;
+  }
+
+  #message {
+    margin-bottom: 30px;
+  }
 }
